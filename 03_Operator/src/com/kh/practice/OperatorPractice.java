@@ -91,7 +91,7 @@ Scanner sc = new Scanner(System.in);
         age = sc.nextInt();
        
         
-        result = (age > 13) ? ((age <= 19) ? "청소년" : "성인") : "어린이"   ;
+        result = (age >= 13) ? ((age <= 19) ? "청소년" : "성인") : "어린이"   ;
         
         System.out.println(result);
     	
