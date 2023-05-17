@@ -20,10 +20,9 @@ public class CastingPractice {
         System.out.println("문자를 입력하세요 > ");
         String code = sc.nextLine();
     	char a = code.charAt(0);
-    	
         System.out.println(a+ " " +"unicode : " + (int) a);
         System.out.println("B unicode : " + (int) (a + 1));
-       0
+       
     	
     	
     	
@@ -49,7 +48,7 @@ public class CastingPractice {
         double total = korean + english + math;
         double everage = total/3;
         
-        System.out.println("총점 : " + total);
+        System.out.println("총점 : " + total); 
         System.out.printf("평균 : %.2f" ,everage);
         
         
