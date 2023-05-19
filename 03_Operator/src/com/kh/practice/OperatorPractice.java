@@ -45,7 +45,7 @@ public class OperatorPractice {
     	int a = 0;
     	int b = 0;
     	int c = 0;
-        String result = "";
+        boolean result = false;
         
         System.out.println("입력 1 >");
         a = sc.nextInt();
@@ -54,7 +54,7 @@ public class OperatorPractice {
         System.out.println("입력 3 >");
         c = sc.nextInt();
         
-        result = (a == b) ? ((c == a) ? "true" : "false") : "false";
+        result = (a == b) && (c == a); 
         
         System.out.println(result);
     	
@@ -136,10 +136,10 @@ Scanner sc = new Scanner(System.in);
 		OperatorPractice p = new OperatorPractice();
 		//p.method1();
 		//p.method2();
-		//p.method3();
+		p.method3();
 		//p.method4();
 		//p.method5();
-		  p.method6();
+//		  p.method6();
 		
 		
 	}
