@@ -118,7 +118,10 @@ public class ConditionPractice {
 
 	*/
 
-	public void practice3() {
+	public void practice3() { // 엇? 코드가 사라진건가요? 아직 풀다가 깜박하고 넘어갔을까요? 
+		                      // 문제 접근할 때 피자 조각 수랑 사람 수 예시를 따로 들어보면서 접근하는 것도 좋아요~~
+		                      // 예를 들어서 피자 조각 수는 8개, 피자 먹는 사람 수는 16명 -> 요런식으로 딱 떨어졌을 때를 몇가지 예시로 적어보고 로직 생각하고
+		                      // 그럼 딱 떨어져 있지 않았을때는? 하면서 조건 걸어보면서 시도하면 좋아요 :)
 
 
 
@@ -206,6 +209,7 @@ public class ConditionPractice {
 
 
 
+	// 여기 중첩 if문 없애고! if문 하나로 합치기!! 할 수 있어요~~
 	if (korea >= 40 && english >= 40 && math >= 40) {
 
 	if (evr >= 60) {
@@ -430,6 +434,8 @@ public class ConditionPractice {
 
 	
 
+	// 앗! if문으로만 사용한 것 좋아요~~~ 단! 한 가지 if~else if~else 등 요런 문법이 나온 이유를 설명해드릴게요!
+	// 사실 제어문은 최대한 줄이는 게 좋거든요 :) 요렇게 사용하게 되면 지금 제어문이 4개가 되지만 if ~ else if ~ else를 사용하면 1개로 줄일 수 있어요!
 	if (bmi < 18.5) {
 
 	System.out.println("저체중");
@@ -722,7 +728,7 @@ public class ConditionPractice {
 
  
 
- }else if(totalscore < 70) {
+ }else if(totalscore < 70) { // 위에서 70점 이상을 했기에 else로 해도 됩니다 :)
 
  System.out.println("=======결과========" + "Fail" + "[과제 점수 부족]" + "(" + totalscore + "/" + "70" + ")");
 
@@ -751,9 +757,7 @@ public class ConditionPractice {
  
 
 	
-
 	
-
 
 
 	public static void main(String[] args) {
@@ -764,26 +768,26 @@ public class ConditionPractice {
 
 	
 
-//	p.practice1();
-//
-//	p.practice2();
-//
-//	p.practice3();
-//
-//	p.practice4();
-//
-//	p.practice5();
-//
-//	p.practice6();
-//
-//	p.practice7();
-//
-//	p.practice8();
-//
-//	p.practice9();
-//
-//	p.practice10();
+	p.practice1();
 
+	p.practice2();
+
+	p.practice3();
+
+	p.practice4();
+
+	p.practice5();
+
+	p.practice6();
+
+	p.practice7();
+
+	p.practice8();
+
+	p.practice9();
+
+	p.practice10();
+	
 	p.practice11();
 
 	
@@ -795,4 +799,3 @@ public class ConditionPractice {
 	}
 
 }
-
