@@ -1,11 +1,8 @@
 package com.kh.practice;
 
-import java.awt.font.FontRenderContext;
-import java.sql.SQLOutput;
 import java.util.*;
 
-import javax.sql.rowset.serial.SQLOutputImpl;
-import javax.swing.plaf.FontUIResource;
+
 
 public class ArrayPractice {
 	Scanner sc = new Scanner(System.in);
@@ -14,11 +11,10 @@ public class ArrayPractice {
 		ArrayPractice p = new ArrayPractice();
 		// p.method1();
 		// p.method2();
-		// p.method3();
+		 p.method3();
 		p.method4();
-		// p.method5();
+		 p.method5();
 	}
-
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
 	 * 
@@ -90,21 +86,21 @@ public class ArrayPractice {
 	public void method4() {
 
 		System.out.println("주민번호를 입력해주세요");
-		String num = sc.nextLine();
-		String[] name = new String[num.length()];
+		String re1 = sc.nextLine();
+		char[] name = new char[re1.length()];
 
 		for (int i = 0; i < name.length; i++) {
-			name[i] = String.valueOf(num.charAt(i));
-			
+			name[i] = re1.charAt(i);
+
 		}
-		String copy[] = name.clone();
+		char copy[] = name.clone();
 
 		for (int i = 0; i < copy.length; i++) {
-			System.out.print(copy[i]);
-			if(
-			}
+			if (i < 8) {
+				System.out.print(copy[i]);
+			}else System.out.print("*");
 		}
-	
+	}
 
 	/*
 	 * 사용자가 입력한 단어를 거꾸로 뒤집어서 출력하세요.
@@ -114,6 +110,23 @@ public class ArrayPractice {
 	 */
 	public void method5() {
 
-	}
+		System.out.println("단어를 입력해주세요");
+		String re1 = sc.nextLine();
+		char[] name = new char[re1.length()];
 
+		for (int i = 0; i < name.length; i++) {
+			name[i] = re1.charAt(i);
+
+		}
+		char copy[] = name.clone();
+        
+		for (int i = copy.length - 1; i >= 0; i--) {
+		
+				System.out.print(copy[i]);
+			
+
+		}
+		
+	
+}
 }
