@@ -231,8 +231,7 @@ public class C_For {
 		// c.method11(); cltr + alt + 방향키
 		// c.method13();
 		// c.method14();
-		 c.method15();
+		c.method15();
 
 	}
 }
-

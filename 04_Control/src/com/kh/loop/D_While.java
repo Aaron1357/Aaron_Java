@@ -46,7 +46,7 @@ public class D_While {
 		while (true) {
 			System.out.println("정답을 맞춰보세요");
 			root = sc.nextInt();
-            
+
 			if (root > bchange) {
 				System.out.println("정답이 " + "보다 낮은 수 입니다.");
 				++repeat;
@@ -65,6 +65,46 @@ public class D_While {
 
 	public void method5() {
 
+		int choose = 0;
+		int in = 0;
+		int out = 0;
+		int account = 0;
+        boolean run = true;
+		while (run) {
+			System.out.println("메뉴를 골라주세요");
+			System.out.println(" 1. 입금 2. 출금 3.잔고 4.종료");
+			choose = sc.nextInt();
+
+			switch (choose) {
+			case 1:
+				System.out.println("예금 메뉴입니다." + "예금하실 금액을 입력해주세요");
+				in = sc.nextInt();
+				account += in;
+				System.out.println("입금 되었습니다. 현재 금액 : " + account);
+				continue;
+
+			case 2:
+				System.out.println("출금 메뉴입니다." + "출금하실 금액을 입력해주세요");
+				out = sc.nextInt();
+				if (account < out) {
+					System.out.println("잔액이 부족합니다");
+					continue;
+				} else
+					account -= out;
+				System.out.println("출금 되었습니다." + "남은금액 :" + account);
+
+			case 3:
+				System.out.println(" 현재 잔고는 :" + account + "입니다.");
+				continue;
+
+			case 4:
+				System.out.println("종료합니다");
+				run = false;
+				break;
+                
+			}
+			
+		}
 	}
 
 	public void method6() {
@@ -77,9 +117,9 @@ public class D_While {
 		// d.method1();
 		// d.method2();
 		// d.method3();
-		d.method4();
+		// d.method4();
 		d.method5();
-		d.method6();
+		// d.method6();
 
 	}
 }
