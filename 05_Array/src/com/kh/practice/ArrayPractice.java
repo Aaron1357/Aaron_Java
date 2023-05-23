@@ -2,8 +2,6 @@ package com.kh.practice;
 
 import java.util.*;
 
-
-
 public class ArrayPractice {
 	Scanner sc = new Scanner(System.in);
 
@@ -11,10 +9,11 @@ public class ArrayPractice {
 		ArrayPractice p = new ArrayPractice();
 		// p.method1();
 		// p.method2();
-		 p.method3();
+		p.method3();
 		p.method4();
-		 p.method5();
+		p.method5();
 	}
+
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
 	 * 
@@ -98,7 +97,8 @@ public class ArrayPractice {
 		for (int i = 0; i < copy.length; i++) {
 			if (i < 8) {
 				System.out.print(copy[i]);
-			}else System.out.print("*");
+			} else
+				System.out.print("*");
 		}
 	}
 
@@ -119,14 +119,12 @@ public class ArrayPractice {
 
 		}
 		char copy[] = name.clone();
-        
+
 		for (int i = copy.length - 1; i >= 0; i--) {
-		
-				System.out.print(copy[i]);
-			
+
+			System.out.print(copy[i]);
 
 		}
-		
-	
-}
+
+	}
 }
