@@ -14,6 +14,9 @@ public class Mail {
      
     
  //----------기능---------
+    public void mailMenu () {     //메일보내기
+	
+    }
     
     public void sendMail() {     //메일보내기
 	}
