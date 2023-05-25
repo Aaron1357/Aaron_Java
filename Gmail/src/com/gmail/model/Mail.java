@@ -10,24 +10,68 @@ public class Mail {
 	public String reAdress;  //받는사람 메일
     public boolean reservation; //보내는 날짜 예약 기능
     public Date rvDate; // 예약메일 날짜지정
+	
+    
+    public Mail() {
+	}
+
+
+	public Mail(String sendAdress, String reAdress, boolean reservation, Date rvDate) {
+		this.sendAdress = sendAdress;
+		this.reAdress = reAdress;
+		this.reservation = reservation;
+		this.rvDate = rvDate;
+	}
+
+
+	public String getSendAdress() {
+		return sendAdress;
+	}
+
+
+	public void setSendAdress(String sendAdress) {
+		this.sendAdress = sendAdress;
+	}
+
+
+	public String getReAdress() {
+		return reAdress;
+	}
+
+
+	public void setReAdress(String reAdress) {
+		this.reAdress = reAdress;
+	}
+
+
+	public boolean isReservation() {
+		return reservation;
+	}
+
+
+	public void setReservation(boolean reservation) {
+		this.reservation = reservation;
+	}
+
+
+	public Date getRvDate() {
+		return rvDate;
+	}
+
+
+	public void setRvDate(Date rvDate) {
+		this.rvDate = rvDate;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Mail [sendAdress=" + sendAdress + ", reAdress=" + reAdress + ", reservation=" + reservation
+				+ ", rvDate=" + rvDate + "]";
+	}
     
      
     
- //----------기능---------
-    public void mailMenu () {     //메일보내기
-	
-    }
-    
-    public void sendMail() {     //메일보내기
-	}
 
-	public void viewMail() {  //메일보기
-	}
-
-	public void reWrite() {  //메일수정
-	}
-
-	public void deleteMail() { //메일삭제
-	}
 
 }

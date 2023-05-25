@@ -14,79 +14,100 @@ public class User {
 	public String userphone;
 	public int age;
 	public char gender;
-
-	// ----------기능---------
-	public void loginMenu() {
-
-		System.out.println("=========메뉴=========="); // 메뉴
-		System.out.println("   1.로그인 2.회원가입");
-		System.out.println("======================");
-		int pick = sc.nextInt();
-		sc.nextLine();
-
-		switch (pick) {
-
-		case 1:
-			System.out.println("========(◕‿◕✿)=========");
-			System.out.println("=====로그인 메뉴입니다.=====");
-			System.out.println("=======================");
-			login();
-			break;
-		case 2:
-			System.out.println("========ლ(╹◡╹ლ)=========");
-			System.out.println("=====회원가입 메뉴입니다.=====");
-			System.out.println("=======================");
-			signUp();
-			break;
-		}
+	
+	
+	public User(Scanner sc, String userId, String userPw, String userName, String userphone, int age, char gender) {
+		this.sc = sc;
+		this.userId = userId;
+		this.userPw = userPw;
+		this.userName = userName;
+		this.userphone = userphone;
+		this.age = age;
+		this.gender = gender;
 	}
 
-	public void login() {
-		boolean statue = true;
-		// 로그인
-		System.out.println("아이디를 입력하세요");
 
-		String idTemp = sc.nextLine();
-
-		if (!idTemp.equals(userId)) {
-			System.out.println("다시 시도해주세요");
-			login();
-		} else {
-
-			while (statue) {
-				System.out.println("패스워드를 입력하세요");
-				String pwTemp = sc.nextLine();
-				if (pwTemp.equals(userPw)) {
-					System.out.println("로그인이 완료 되었습니다");
-					statue = false;
-					break;
-				} else {
-					System.out.println("다시 시도해주세요");
-				}
-			}
-			loginMenu();
-		}
+	public User() {
 	}
 
-	public void signUp() { // 회원가입
-		System.out.println("아이디를 입력하세요");
-		userId = sc.nextLine();
 
-		System.out.println("패스워드를 입력하세요");
-		userPw = sc.nextLine();
-
-		System.out.println("로그인 메뉴로 갑니다");
-		login();
-
+	public Scanner getSc() {
+		return sc;
 	}
 
-	public void viewMail() { // 메일 아이디확인
+
+	public void setSc(Scanner sc) {
+		this.sc = sc;
 	}
 
-	public void changePw() { // 비밀번호 변경
+
+	public String getUserId() {
+		return userId;
 	}
 
-	public void exit() { // 탈퇴
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
+
+	public String getUserPw() {
+		return userPw;
+	}
+
+
+	public void setUserPw(String userPw) {
+		this.userPw = userPw;
+	}
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+
+	public String getUserphone() {
+		return userphone;
+	}
+
+
+	public void setUserphone(String userphone) {
+		this.userphone = userphone;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+	public char getGender() {
+		return gender;
+	}
+
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User [sc=" + sc + ", userId=" + userId + ", userPw=" + userPw + ", userName=" + userName
+				+ ", userphone=" + userphone + ", age=" + age + ", gender=" + gender + "]";
+	}
+	
+	
+
+	
 }
