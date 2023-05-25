@@ -42,7 +42,7 @@ public class SnackController {
 		
 		 //메서드 
 		
-		return ((int)this.s1.getNumOf()) + a;
+		return this.s1.getNumOf() + a;
 	   
 		
 	}
