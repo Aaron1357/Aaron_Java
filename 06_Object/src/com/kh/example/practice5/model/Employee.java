@@ -11,7 +11,7 @@ public class Employee {
 	private double bonus;
 
 	public Employee() {
-	}
+	}//
 
 	public Employee(int empNo, String name, char gender, String phone, String dept, int salary, double bonus) {
 		this.empNo = empNo;

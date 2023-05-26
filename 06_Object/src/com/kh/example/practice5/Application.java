@@ -47,7 +47,7 @@ public class Application {
 		int choiceMenu = Integer.parseInt(sc.nextLine());
 
 		return choiceMenu; // 메뉴 번호 리턴!
-	}
+	}//
 
 	public void insertEmp() {
 

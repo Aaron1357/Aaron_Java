@@ -10,7 +10,7 @@ public class EmployeeController {
 		employee.setName(name);
 		employee.setGender(gender);
 		employee.setPhone(phone);
-	}
+	}//
 
 	public void add(int empNo, String name, char gender, String phone, String dept, int salary, double bonus) {
 		employee.setEmpNo(empNo);
