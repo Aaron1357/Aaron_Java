@@ -32,8 +32,8 @@ public class Run {
 	 // ---------데이터를 서버한테 요청하는 부분 ----------//
 	 
 	 SnackController snackControl = new SnackController();
-	 Snack viewSnack = new Snack(kind,name,flavor,numOf,price); // << Snack에 생성자로 들어감! 스낵입력값 완성
-	 snackControl.saveData(viewSnack);
+	 Snack tempSnack = new Snack(kind,name,flavor,numOf,price); // << Snack에 생성자로 들어감! 스낵입력값 완성
+	 snackControl.saveData(tempSnack);
 	 
 	 //------서버한테 데이터 결과를 받아서 다시 화면으로 돌아오는 곳-----//
 	 System.out.println("저장 완료 되었습니다.");
