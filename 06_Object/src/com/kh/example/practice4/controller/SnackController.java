@@ -1,49 +1,38 @@
 package com.kh.example.practice4.controller;
-
-import java.util.Scanner;
-
 import com.kh.example.practice4.model.*;
-//$컨트롤러$
-
-//사용자가 화면에서 요청한 부분을 처리하는 기능 담당/
-//이때 처리 후에 결과를 여기서 출력하는게 아니라 결과값을 
-//다시 view에 반환하여 view에서 처리하도록 해야 함
-
 public class SnackController {
-	private Snack s1 = new Snack();
-	
- Scanner sc = new Scanner(System.in);
- 
-	public SnackController() {}
-	
-	
-		
-	
-//데이터를 setter를 이용해 저장하고 저장되었다는 결과를 반환하는 메서드
-	public boolean saveData(Snack sn1) {
-		this.s1.setKind(sn1.getKind());
-		this.s1.setName(sn1.getName());
-		this.s1.setPrice(sn1.getPrice());
-		this.s1.setNumOf(sn1.getNumOf());
-		this.s1.setFlavor(sn1.getFlavor());
-		
-		return true;
 
+//  멤버변수  > 보통 모델로 만들어 둔 클래스가 온다.
+	Snack snack = new Snack();
+//          ^ 컨트롤러에 예속 된 스낵.
+	
+//	생성자 > 기본생성자
+	
+	public SnackController() {
 	}
-
-// 저장된 데이터를 반환하는 메서드
-
+	
+	
+//	메서드 >  
+	
+	//데이터를 setter를 이용해 저장하고, 저장되어있다는 결과를 반환하는 메서드
+	public boolean saveData(Snack viewSnack) {//<<< 런에서 온 스낵 (viewSnack) 
+		                   // ^ 컨트롤러에 예속 된 스낵 (snack)
+		
+	// -----------얘네는 런에서 받은 값을 스낵 컨트롤러에 예속 한 스낵컨트롤러 속 스낵--------
+		snack.setKind(viewSnack.getKind());
+		snack.setFlavor(viewSnack.getKind());
+		snack.setName(viewSnack.getName());
+		snack.setNumOf(viewSnack.getNumOf());
+		snack.setPrice(viewSnack.getPrice());
+	
+	
+	return true;       
+	}
+	
+	// 컨트롤러에 저장된 데이터를 반환하는 메서드\
 	public Snack confirmData() {
-		return this.s1;
-
-	}
-	
-	public int aditNum(int a) {
-		
-		 //메서드 
-		
-		return this.s1.getNumOf() + a;
-	   
+//		   ^ 스낵이라는 클래스의 형식 자체가 변환값
+		return snack; 
 		
 	}
 }
