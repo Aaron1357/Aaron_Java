@@ -8,6 +8,7 @@ public class User {
 	private String nickname;
 	private char gender;
 	
+	Video video;
 	
 	public User() {
 	}
