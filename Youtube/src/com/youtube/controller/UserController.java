@@ -2,36 +2,32 @@ package com.youtube.controller;
 
 import com.youtube.model.User;
 
-public class UserController {
+public class UserController implements UserControllerImpl{
 
-	public boolean login() {
-		return false;
-
-	}
-
-	// 회원가입
-
+	@Override
 	public boolean signUp() {
 		return false;
+		
 	}
 
-	// 프로필 보기
-
+	@Override
 	public User viewProfile() {
 		return null;
+		
 	}
 
-	// 프로필 수정
-
+	@Override
 	public User updateProfile() {
 		return null;
+		
 	}
 
-	// 계정 삭제
-
+	@Override
 	public boolean deleteId() {
-         return false;
+		return false;
+		
 	}
 
+	
 }
 
