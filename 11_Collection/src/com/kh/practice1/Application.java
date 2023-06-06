@@ -132,6 +132,7 @@ public class Application {
 		Music m = new Music();
 		System.out.println("수정 할 곡을 입력하세요");
 		String search = sc.nextLine();
+		
 		if (mc.searchMusic(search) != null) {
 			System.out.println("수정 할 제목을 입력하세요");
 			String title = sc.nextLine();
@@ -140,7 +141,7 @@ public class Application {
 			m.setTitle(title);
 			m.setArtist(artist);
 			System.out.println(mc.searchMusic(search) + "의 값이 수정되었습니다.");
-			if (mc.setMusic(search, m) != null) {
+			if (mc.setMusic(search, m) != null) { //= list.get(i);
 			} else
 				System.out.println("수정 할 곡이 없습니다.");
 
