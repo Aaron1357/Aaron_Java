@@ -12,7 +12,7 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		System.out.println("========== KH 마트 ==========");
+		System.out.println("========== 햄스터 게시판 ==========");
 		Application app = new Application();
 		app.mainMenu();
 
@@ -23,8 +23,8 @@ public class Application {
 
 		while (check) {
 			System.out.println("****** 메뉴 ******");
-			System.out.println("1. 직원 메뉴");
-			System.out.println("2. 손님 메뉴");
+			System.out.println("1. 운영자 메뉴");
+			System.out.println("2. 윤저 메뉴");
 			System.out.println("9. 종료");
 
 			try {
@@ -52,10 +52,10 @@ public class Application {
 	public void adminMenu() throws Exception {
 
 		System.out.println("****** 직원 메뉴 ******");
-		System.out.println("1. 새 농산물 추가");
-		System.out.println("2. 농산물 삭제");
-		System.out.println("3. 수량 수정");
-		System.out.println("4. 농산물 목록");
+		System.out.println("1. 새 게시글 추가");
+		System.out.println("2. 게시글 삭제");
+		System.out.println("3. 게시글 수정");
+		System.out.println("4. 게시글목록");
 		System.out.println("9. 메인으로 돌아가기");
 		System.out.print("메뉴 번호 선택 : ");
 		switch (Integer.parseInt(sc.nextLine())) {
@@ -79,12 +79,12 @@ public class Application {
 
 	public void customerMenu() throws Exception {
 
-		System.out.println("현재 KH마트 농산물 수량");
+		System.out.println("햄스터 게시판");
 		printFarm();
 		System.out.println("****** 고객 메뉴 ******");
-		System.out.println("1. 농산물 사기");
-		System.out.println("2. 농산물 빼기");
-		System.out.println("3. 구입한 농산물 보기");
+		System.out.println("1. 게시글 추천");
+		System.out.println("2. 게시글 비추천");
+		System.out.println("3. 추천 누른 글 보기");
 		System.out.println("9. 메인으로 돌아가기");
 		System.out.print("메뉴 번호 선택 : ");
 		switch (Integer.parseInt(sc.nextLine())) {
@@ -113,12 +113,12 @@ public class Application {
 		 * false면 "새 농산물 추가에 실패하였습니다. 다시 입력해주세요." 출력되며 다시 번호를 받음.
 		 * 
 		 */
-		System.out.println("1. 과일 / 2. 채소 / 3. 견과");
-		System.out.print("추가할 종류 번호 : ");
+		System.out.println("1. 자유 / 2. 정보 / 3. 질문");
+		System.out.print("추가할 종류 게시글 카테고리 : ");
 		int select = Integer.parseInt(sc.nextLine());
-		System.out.print("추가할 이름 : ");
+		System.out.print("게시글 이름  : ");
 		String name = sc.nextLine();
-		System.out.print("추가할 수량 : ");
+		System.out.print(": ");
 		int amount = Integer.parseInt(sc.nextLine());
 
 		String kind = null;

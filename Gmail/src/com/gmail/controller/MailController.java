@@ -1,20 +1,34 @@
 package com.gmail.controller;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Set;
+
+import com.gmail.model.*;
+
 public class MailController {
-	 //----------기능---------
-    public void mailMenu () {     //메일보내기
-	
-    }
-    
-    public void sendMail() {     //메일보내기
+
+	private HashMap<String, Mail> mailMap = new HashMap<>();
+
+	public String myMail(String who, Mail mail) {
+
+		Set<String> key = mailMap.keySet();
+
+		mailMap.put(who, mail);
+
+		return who + "님에게 메일을 발송하였습니다";
 	}
 
-	public void viewMail() {  //메일보기
-	}
+	public String totalMail() {
+		String temp = "";
+		Set<String> key = mailMap.keySet();
 
-	public void reWrite() {  //메일수정
-	}
+		for (String string : key) {
+			temp += "받는 사람 : " + string + " 메일 제목 :" + mailMap.get(string).getMailIndex() + " 메일 내용 :"
+					+ mailMap.get(string).getMailnote() + "\n";
 
-	public void deleteMail() { //메일삭제
+		}
+
+		return temp;
 	}
 }
