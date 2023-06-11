@@ -42,6 +42,7 @@ public class Application {
 				check = false;
 				System.out.println("프로그램 종료");
 				break;
+			default : System.out.println("잘 못 입력하셨습니다"); mainMenu();
 			}
 		}
 	}
@@ -109,6 +110,7 @@ public class Application {
 			case 3:
 				totalMail();
 				break;
+		default : System.out.println("잘 못 입력하셨습니다"); realMenu();
 			}
 		}
 	}
@@ -131,6 +133,7 @@ public class Application {
 			case 3:
 				 mainMenu();
 				break;
+			default : System.out.println("잘 못 입력하셨습니다"); memberMenu();
 			}
 		}
 	}
