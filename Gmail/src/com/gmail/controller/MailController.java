@@ -4,31 +4,33 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 
-import com.gmail.model.*;
+import com.gmail.model.Mail;
 
 public class MailController {
 
-	private HashMap<String, Mail> mailMap = new HashMap<>();
+    private HashMap<String, Mail> mailMap = new HashMap<>();
 
-	public String myMail(String who, Mail mail) {
+    public String myMail(String who, Mail mail) {
+        mailMap.put(who, mail);
+        return who + "님에게 메일을 발송하였습니다";
+    }
 
-		Set<String> key = mailMap.keySet();
+    public String totalMail() {
+        String temp = "";
+        Set<String> key = mailMap.keySet();
 
-		mailMap.put(who, mail);
+        for (String string : key) {
+            temp += "받는 사람: " + string + " 메일 제목: " + mailMap.get(string).getMailIndex() + " 메일 내용: "
+                    + mailMap.get(string).getMailnote() + "\n";
+        }
 
-		return who + "님에게 메일을 발송하였습니다";
-	}
+        return temp;
+    }
+    public String deleteMail(String who) {
+		 
+		mailMap.remove(who);
+		
 
-	public String totalMail() {
-		String temp = "";
-		Set<String> key = mailMap.keySet();
-
-		for (String string : key) {
-			temp += "받는 사람 : " + string + " 메일 제목 :" + mailMap.get(string).getMailIndex() + " 메일 내용 :"
-					+ mailMap.get(string).getMailnote() + "\n";
-
-		}
-
-		return temp;
-	}
+	return "메일 함이 삭제되었습니다.";
+}
 }

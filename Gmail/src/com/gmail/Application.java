@@ -99,6 +99,7 @@ public class Application {
 			System.out.println("1. 마이페이지");
 			System.out.println("2. 새 메일 작성하기");
 			System.out.println("3. 보낸 메일 확인하기");
+			System.out.println("4. 보낸 메일함 비우기");
 			System.out.print("메뉴 번호 입력 : ");
 			switch (Integer.parseInt(sc.nextLine())) {
 			case 1:
@@ -109,6 +110,9 @@ public class Application {
 				break;
 			case 3:
 				totalMail();
+				break;
+			case 4:
+				deleteMail();
 				break;
 		default : System.out.println("잘 못 입력하셨습니다"); realMenu();
 			}
@@ -195,6 +199,15 @@ public void myMail(){
 		
 			
 		}	
+	public void deleteMail() {
+		
+		System.out.println("지울 메일의 수신인을 적어주세요");
+		String who = sc.nextLine();
+		
+		System.out.println(mailcontrol.deleteMail(who));
+		
+		
+	}	
 	}
    
 
