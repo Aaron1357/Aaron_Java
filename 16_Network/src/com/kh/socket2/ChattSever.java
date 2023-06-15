@@ -11,7 +11,7 @@ public class ChattSever {
 
 	//클라이언트가 보낸 메세지를받아서
 	// 다시 클라이언트에게 받은 메세지를 보낸다.
-	//씨발 한번에 말좀 해라 병신아
+
 	public static void main(String[] args) {
 //	 서버 생성
 		

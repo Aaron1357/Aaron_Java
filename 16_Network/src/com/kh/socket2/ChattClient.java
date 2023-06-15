@@ -30,7 +30,7 @@ public class ChattClient {
 			}
 			s.close();
 		} catch (IOException e) {
-			System.out.println("연결이 끊옂ㅆ습니다");
+			System.out.println("연결이 끊어졌습니다");
 		}
 
 	}
